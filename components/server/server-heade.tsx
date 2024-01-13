@@ -37,28 +37,30 @@ export const ServerHeader = ({
                                 onClick={() => onOpen("invite", {server})}
                             className="text-indigo-600 dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer">
                                 <UserPlus className="h-4 w-4 ml-auto" />
-                                Invite People
+                                <span className="ml-1">Invite People</span>
                             </DropdownMenuItem>
                         )}
 
                         {isAdmin && (
-                            <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer">
+                            <DropdownMenuItem 
+                                onClick={() => onOpen("editServer", {server})}
+                                className="px-3 py-2 text-sm cursor-pointer">
                                 <Settings className="h-4 w-4 ml-auto" />
-                                Server Settings
+                                <span className="ml-1">Server Settings</span>
                             </DropdownMenuItem>
                         )}
 
                         {isAdmin && (
                             <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer">
                                 <Users className="h-4 w-4 ml-auto" />
-                                Manage Members
+                                <span className="ml-1">Manage Members</span>
                             </DropdownMenuItem>
                         )}
 
                         {isModerator && (
                             <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer">
                                 <Plus className="h-4 w-4 ml-auto" />
-                                Create channel
+                                <span className="ml-1">Create Channel</span>
                             </DropdownMenuItem>
                         )}
 
